@@ -142,7 +142,7 @@ class TerminalViewState extends State<TerminalView> {
 
   void _onKeyboardShow() {
     if (focusNode.hasFocus) {
-      WidgetsBinding.instance?.addPostFrameCallback((_) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
         _scrollToBottom();
       });
     }
@@ -504,7 +504,7 @@ class _RenderTerminalViewport extends RenderBox {
       }
     }
 
-    SchedulerBinding.instance!
+    SchedulerBinding.instance
         .addPostFrameCallback((_) => _notifyEditableRect());
   }
 
